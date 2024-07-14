@@ -27,7 +27,7 @@ self.addEventListener("activate", (e) => {
 self.addEventListener("fetch", (e) => {
     e.respondWith((async () => {
         if(e.request.url.endsWith(".addon.js"))
-            return await responseFirstCache(e.request);
+            return await caches.open(CACHE).then(cache => cache.match(e.request));
             
         return await responseFirstWeb(e.request);
     })());
