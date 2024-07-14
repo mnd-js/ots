@@ -1,4 +1,4 @@
-const CACHE = "static_v1";
+const CACHE = "static";
 const urlsToCache = ["./", "./index.html", "./icon.svg", "./manifest.json"];
 
 /********************************/

@@ -14,5 +14,18 @@
             "sizes": "512x512",
             "type": "image/svg+xml"
         }
+    ],
+    "shortcuts": [
+        {
+            "name": "Page",
+            "description": "View the page",
+            "url": "/ots/page",
+            "icons": [
+                {
+                    "src": "./icon.svg",
+                    "type": "image/svg+xml"
+                }
+            ]
+        }
     ]
 }

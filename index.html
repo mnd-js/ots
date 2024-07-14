@@ -30,7 +30,7 @@
         });
         
         /********************************/
-        window.install ??= async function(path = "./main.addon.js", cacheName = "static_v1") {
+        window.install ??= async function(path = "./main.addon.js", cacheName = "static") {
             const f = document.createElement("input");
             f.type = "file";f.click();
             await new Promise(res => f.onchange = res);
