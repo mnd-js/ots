@@ -1,6 +1,6 @@
 const CACHE = "static";
-const urlsToCache = [];
-const statics = ["/ots/icon.svg","/ots/mpx_imgs.json","/ots/","/ots/manifest.json"];
+const statics = ["/ots/icon.svg","/ots/mpx_imgs.json","/ots/","/ots/index.html","/ots/manifest.json"];
+const urlsToCache = statics;
 
 /********************************/
 self.addEventListener("install", (e) => {
