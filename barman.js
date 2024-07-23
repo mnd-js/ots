@@ -1,5 +1,6 @@
 const CACHE = "static";
 const urlsToCache = ["./", "./index.html", "./icon.svg", "./manifest.json"];
+const statics = ["/ots/icon.svg","/ots/mpx_imgs.json","/ots/","/ots/manifest.json"];
 
 /********************************/
 self.addEventListener("install", (e) => {
@@ -26,10 +27,11 @@ self.addEventListener("activate", (e) => {
 
 self.addEventListener("fetch", (e) => {
     e.respondWith((async () => {
-        if(e.request.url.endsWith(".addon.js"))
-            return await caches.open(CACHE).then(cache => cache.match(e.request));
-            
-        return await responseFirstWeb(e.request);
+        let { pathname } = new URL(e.request.url);
+        if(statics.includes(pathname))
+            return await responseFirstWeb(e.request);
+        
+        return await caches.open(CACHE).then(cache => cache.match(e.request));
     })());
 });
 
