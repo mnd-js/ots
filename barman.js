@@ -1,5 +1,5 @@
 const CACHE = "static";
-const urlsToCache = ["./", "./index.html", "./icon.svg", "./manifest.json"];
+const urlsToCache = [];
 const statics = ["/ots/icon.svg","/ots/mpx_imgs.json","/ots/","/ots/manifest.json"];
 
 /********************************/
